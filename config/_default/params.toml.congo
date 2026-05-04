@@ -1,0 +1,28 @@
+# Theme
+colorScheme = "congo"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+
+# Homepage
+[homepage]
+	layout = "page"
+	showRecent = true
+	recentLimit = 10
+	
+[header]
+	layout = "basic"
+	showTitle = "false"
+	
+# Article
+article.showDate = true
+article.showReadingTime = true
+article.showTableOfContents = true
+article.showTaxonomies = true
+
+# List pages
+list.showSummary = true
+list.groupByYear = false
+
+[footer]
+	showCopyright = true
+	showThemeAttribution = false

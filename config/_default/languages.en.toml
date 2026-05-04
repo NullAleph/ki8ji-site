@@ -1,0 +1,13 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "KI8JI"
+
+[params.author]
+  name = "Raaj Shinde"
+  email = ""
+  headline = "Amateur Radio · Inquiry · KI8JI"
+  bio = "Returning to amateur radio after 25 years, asking why things work the way they do."
+  links = [
+    {rationalmysticism = "https://raajshinde.net"}
+  ]

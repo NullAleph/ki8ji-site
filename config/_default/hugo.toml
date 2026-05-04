@@ -1,0 +1,26 @@
+baseURL = "https://ki8ji.org/"
+locale = 'en-us'
+
+title = "KI8JI"
+theme = "stack"
+mainSections = ["posts"]
+
+
+[params]
+	math = true
+	ShowReadingTime = true
+	ShowPostNavLinks = true
+	ShowBreadCrumbs = false
+	ShowCodeCopyButtons = true
+		
+[params.homeInfoParams]
+	Title = "KI8JI"
+	Content = "Inquiry into amateur radio from first principles"
+	
+[markup.goldmark.extensions.passthrough]
+	enable = true
+	
+[markup.goldmark.extensions.passthrough.delimiters]
+	block = [['\[', '\]'], ['$$', '$$']]
+	inline = [['\(', '\)']]
+	

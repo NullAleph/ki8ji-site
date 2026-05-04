@@ -1,0 +1,25 @@
+# Hugo generated output - never commit this
+public/
+resources/_gen/
+
+# Hugo cache
+.hugo_build.lock
+
+# macOS filesystem artifacts
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS directory thumbnails
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Editor/IDE files
+.vscode/
+.idea/
+
+# Environment files if you ever use them
+.env
+.env.local

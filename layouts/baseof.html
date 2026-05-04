@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale }}" dir="{{ default `ltr` .Language.Direction }}">
+    <head>
+        {{- partial "head/head.html" . -}}
+        {{- block "head" . -}}{{ end }}
+    </head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+    
+    :root {
+        --accent-color: #FF9933;
+        --accent-color-darker: #e67d00;
+        --accent-color-text: #fff;
+        --base-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        --article-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6,
+    .article-title,
+    .widget-title {
+        font-family: 'IBM Plex Serif', Georgia, serif !important;
+    }
+    
+    .site-header-full {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2rem 15px 0 15px;
+        box-sizing: border-box;
+        max-width: 1024px;
+    }
+    
+    @media (min-width: 768px) {
+        .site-header-full { padding: 2rem 20px 0 20px; }
+    }
+    
+    @media (min-width: 1024px) {
+        .site-header-full { max-width: 1280px; }
+    }
+    
+    @media (min-width: 1280px) {
+        .site-header-full { max-width: 1536px; }
+    }
+    
+    .site-header-title {
+        display: block;
+        font-family: 'IBM Plex Serif', Georgia, serif;
+        font-size: 5rem;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        line-height: 1;
+        color: rgba(255, 255, 255, 0.9) !important;
+        text-decoration: none;
+        margin-bottom: 0.3rem;
+    }
+    
+    .site-header-title:hover {
+        color: #FF9933 !important;
+        transition: color 0.2s ease;
+    }
+    
+    .site-header-subtitle {
+        font-family: 'Inter', sans-serif;
+        font-size: 2.5rem !important;
+        font-weight: 200 !important;
+        color: rgba(255, 255, 255, 0.55);
+        margin: 0 0 0.75rem 0;
+        letter-spacing: 0.02em;
+    }
+    
+    .site-header-divider {
+        height: 3px;
+        background: #FF9933;
+        width: 100%;
+        border-radius: 2px;
+    }
+    </style>
+    <body class="{{ block `body-class` . }}{{ end }}">
+        {{- partial "head/colorScheme" . -}}
+
+        {{/* Detect widgets */}}
+        {{- $hasWidget := false -}}
+        {{- range .Site.Params.widgets -}}
+            {{- if gt (len .) 0 -}}
+                {{- $hasWidget = true -}}
+            {{- end -}}
+        {{- end -}}
+
+        {{/* Full-width site header */}}
+        <div class="site-header-full">
+            <a href="{{ .Site.Home.RelPermalink }}" class="site-header-title">{{ .Site.Title }}</a>
+            <div class="site-header-subtitle">Amateur Radio · First Principles</div>
+            <div class="site-header-divider"></div>
+        </div>
+
+        {{/* Main three-column layout */}}
+        <div class="container main-container flex on-phone--column {{ if $hasWidget }}extended{{ else }}compact{{ end }}">
+            {{- block "left-sidebar" . -}}
+                {{ partial "sidebar/left.html" . }}
+            {{- end -}}
+            {{- block "right-sidebar" . -}}{{ end }}
+            <main class="main full-width">
+                {{- block "main" . }}{{- end }}
+            </main>
+        </div>
+        {{ partial "footer/include.html" . }}
+    </body>
+</html>
