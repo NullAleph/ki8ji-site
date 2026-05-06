@@ -6,8 +6,8 @@ title = "KI8JI"
 [params.author]
   name = "Raaj Shinde"
   email = ""
-  headline = "Amateur Radio · Inquiry · KI8JI"
+  headline = "Amateur Radio · First Principles"
   bio = "Returning to amateur radio after 25 years, asking why things work the way they do."
   links = [
-    {rationalmysticism = "https://raajshinde.net"}
+    {rationalmysticism = "https://raajshinde.net"\}
   ]

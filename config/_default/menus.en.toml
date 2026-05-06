@@ -1,4 +1,3 @@
-# Main nav
 [[main]]
   name = "About"
   pageRef = "about"
@@ -9,38 +8,42 @@
   pageRef = "posts"
   weight = 20
 
-# Topic sidebar links
 [[main]]
   name = "Antennas"
-  pageRef = "tags/antennas"
+  url = "/tags/antennas/"
   weight = 30
 
 [[main]]
   name = "Boatanchors"
-  pageRef = "tags/boatanchors"
+  url = "/tags/boatanchors/"
   weight = 40
 
 [[main]]
   name = "Modeling"
-  pageRef = "tags/modeling"
+  url = "/tags/modeling/"
   weight = 50
 
 [[main]]
   name = "Homebrew"
-  pageRef = "tags/homebrew"
+  url = "/tags/homebrew/"
   weight = 60
 
 [[main]]
   name = "Instruments"
-  pageRef = "tags/instruments"
+  url = "/tags/instruments/"
   weight = 70
 
 [[main]]
   name = "Theory"
-  pageRef = "tags/theory"
+  url = "/tags/theory/"
   weight = 80
 
 [[main]]
-  name = "Operating"
-  pageRef = "tags/operating"
+  name = "Gear"
+  url = "/tags/gear/"
   weight = 90
+
+[[main]]
+  name = "Station"
+  url = "/tags/station/"
+  weight = 100
