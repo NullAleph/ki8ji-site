@@ -6,18 +6,73 @@
     </button>
 
     <ol class="menu" id="main-menu">
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-        {{ $active := or (eq $currentPage.RelPermalink .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
-        <li {{ if $active }} class='current'{{ end }}>
-            <a href='{{ .URL }}' {{ if .Params.newTab }}target="_blank"{{ end }}>
-                {{ with .Params.Icon }}
-                    {{ partial "helper/icon" . }}
-                {{ end }}
-                <span>{{- .Name -}}</span>
+        {{/* Static top links */}}
+        <li>
+            <a href="/about/" class="topic-link">
+                <span>About</span>
             </a>
         </li>
+        <li>
+            <a href="/posts/" class="topic-link">
+                <span>Essays</span>
+            </a>
+        </li>
+
+        {{/* Accordion topic links */}}
+        {{ $topics := slice
+            (dict "name" "Antennas"    "tag" "antennas")
+            (dict "name" "Boatanchors" "tag" "boatanchors")
+            (dict "name" "Modeling"    "tag" "modeling")
+            (dict "name" "Homebrew"    "tag" "homebrew")
+            (dict "name" "Instruments" "tag" "instruments")
+            (dict "name" "Theory"      "tag" "theory")
+            (dict "name" "Gear"        "tag" "gear")
+            (dict "name" "Station"     "tag" "station")
+        }}
+
+        {{ range $topics }}
+            {{ $tag := .tag }}
+            {{ $name := .name }}
+            {{ $tagPage := $.Site.GetPage (printf "/tags/%s" $tag) }}
+            {{ $posts := slice }}
+            {{ if $tagPage }}
+                {{ $posts = $tagPage.Pages }}
+            {{ end }}
+            {{ $postCount := len $posts }}
+
+            <li class="accordion-item">
+                {{ if gt $postCount 0 }}
+                    <details class="topic-accordion">
+                        <summary class="topic-summary">
+                            <span class="topic-name">{{ $name }}</span>
+                            <span class="topic-count">({{ $postCount }})</span>
+                        </summary>
+                        <ol class="topic-posts">
+                            {{ range first 5 $posts }}
+                                <li>
+                                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                </li>
+                            {{ end }}
+                            <li class="more-link">
+                                <a href="/tags/{{ $tag }}/">
+                                    {{ if gt $postCount 5 }}
+                                        {{ sub $postCount 5 }} more →
+                                    {{ else }}
+                                        See all {{ $name }} →
+                                    {{ end }}
+                                </a>
+                            </li>
+                        </ol>
+                    </details>
+                {{ else }}
+                    <a href="/tags/{{ $tag }}/" class="topic-link">
+                        <span>{{ $name }}</span>
+                    </a>
+                {{ end }}
+            </li>
         {{ end }}
+
+        {{/* Bottom section */}}
         <li class="menu-bottom-section">
             <ol class="menu">
                 {{ if .Site.Params.colorScheme.toggle }}
