@@ -297,6 +297,44 @@
             padding-top: 2rem !important;
         }
         
+        /* ── ABOUT PAGE PORTRAIT ─────────────────────────────────── */
+        /* ── ABOUT PAGE PORTRAIT ─────────────────────────────────── */
+        .portrait {
+            float: left;
+            margin: 0 2rem 1rem 0;
+            width: 280px;
+            border-radius: 4px;
+        }
+        
+        .portrait img {
+            width: 100%;
+            border-radius: 4px;
+            display: block;
+        }
+        
+        /* Clear float after article content */
+        .article-content::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        figure.portrait {
+            float: left !important;
+            margin: 0 2rem 1.5rem 0 !important;
+            width: 260px !important;
+            max-width: 260px !important;
+            border-radius: 4px !important;
+            overflow: hidden !important;
+        }
+        
+        figure.portrait img {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            border-radius: 4px !important;
+        }
+
         </style>
     </head>
     <body class="{{ block `body-class` . }}{{ end }}">
