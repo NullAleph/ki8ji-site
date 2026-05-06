@@ -165,7 +165,138 @@
         .topic-link:hover {
             color: #FF9933 !important;
         }
-
+        
+        .section-list-header {
+            display: none;
+        }
+        
+        /* Hide TAGS page header but keep sidebar widget titles */
+        .main-container > main h2.section-title,
+        .main-container > main h3.section-title {
+            display: none;
+        }
+        
+        /* ── TOPIC LANDING PAGES ─────────────────────────────────── */
+        .topic-intro {
+            padding: 0.5rem 0 1.5rem 0;
+        }
+        
+        .topic-title {
+            font-family: 'IBM Plex Serif', Georgia, serif !important;
+            font-size: 4rem !important;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .topic-description {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 65ch;
+            margin: 0;
+        }
+        
+        .topic-divider {
+            height: 2px;
+            background: #FF9933;
+            opacity: 0.5;
+            border-radius: 2px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* ── HOMEPAGE INTRO ──────────────────────────────────────── */
+        .home-intro {
+            padding: 0 0 1.5rem 0;
+            max-width: 65ch;
+        }
+        
+        .home-intro p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.7rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 1.5rem;
+        }
+        
+        .home-intro p:last-child {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* ── HOMEPAGE TITLE ──────────────────────────────────────── */
+        .home-intro h2:first-child {
+            font-family: 'IBM Plex Serif', Georgia, serif !important;
+            font-size: 2.7rem !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            line-height: 1.2 !important;
+            margin-bottom: 2rem !important;
+            margin-top: 0 !important;
+            letter-spacing: -0.02em;
+        }
+        
+        @media (min-width: 768px) {
+            .container.extended {
+                --right-sidebar-max-width: 18%;
+                --left-sidebar-max-width: 18%;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container.extended {
+                --right-sidebar-max-width: 18%;
+                --left-sidebar-max-width: 18%;
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .container.extended {
+                --right-sidebar-max-width: 18%;
+                --left-sidebar-max-width: 15%;
+            }
+        }
+        
+        .container .right-sidebar {
+            max-width: 18% !important;
+            width: 18% !important;
+        }
+        
+        .container .left-sidebar {
+            max-width: 18% !important;
+            width: 18% !important;
+        }
+        
+        .main-container.extended .right-sidebar,
+        .main-container.compact .right-sidebar {
+            max-width: 18% !important;
+            width: 18% !important;
+            flex-basis: 18% !important;
+        }
+        
+        .main-container.extended .left-sidebar,
+        .main-container.compact .left-sidebar {
+            max-width: 20% !important;
+            width: 20% !important;
+            flex-basis: 20% !important;
+        }
+        
+        main.main {
+            gap: 2px !important;
+            padding-top: 2rem !important;
+        }
+        
+        .left-sidebar {
+            padding-top: 2rem !important;
+        }
+        
+        .right-sidebar {
+            padding-top: 2rem !important;
+        }
+        
         </style>
     </head>
     <body class="{{ block `body-class` . }}{{ end }}">

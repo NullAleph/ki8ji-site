@@ -1,0 +1,31 @@
+{{ define "main" }}
+    <style>
+        main.main { padding-top: 0 !important; }
+    </style>
+    <div class="topic-intro">
+    {{/* Topic intro section */}}
+    <div class="topic-intro">
+        <h1 class="topic-title">{{ .Title }}</h1>
+        {{ with .Params.description }}
+            <p class="topic-description">{{ . }}</p>
+        {{ end }}
+    </div>
+    <div class="topic-divider"></div>
+
+    {{/* Essay cards */}}
+    {{- $pages := partial "helper/pages.html" . -}}
+    {{ $paginator := partial "helper/paginator.html" . }}
+    {{ with $paginator }}
+        <section class="article-list--compact">
+            {{ range .Pages }}
+                {{ partial "article-list/compact" . }}
+            {{ end }}
+        </section>
+    {{ end }}
+    {{- partial "pagination.html" . -}}
+    {{ partialCached "footer/footer" . }}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

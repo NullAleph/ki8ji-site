@@ -1,0 +1,13 @@
+{{ define "main" }}
+    {{/* Homepage introduction */}}
+    {{ with .Content }}
+        <div class="home-intro">
+            {{ . }}
+        </div>
+    {{ end }}
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

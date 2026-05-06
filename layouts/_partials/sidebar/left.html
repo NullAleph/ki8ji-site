@@ -39,37 +39,33 @@
                 {{ $posts = $tagPage.Pages }}
             {{ end }}
             {{ $postCount := len $posts }}
-
+            
+            {{ if gt $postCount 0 }}
             <li class="accordion-item">
-                {{ if gt $postCount 0 }}
-                    <details class="topic-accordion">
-                        <summary class="topic-summary">
-                            <span class="topic-name">{{ $name }}</span>
-                            <span class="topic-count">({{ $postCount }})</span>
-                        </summary>
-                        <ol class="topic-posts">
-                            {{ range first 5 $posts }}
-                                <li>
-                                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                                </li>
-                            {{ end }}
-                            <li class="more-link">
-                                <a href="/tags/{{ $tag }}/">
-                                    {{ if gt $postCount 5 }}
-                                        {{ sub $postCount 5 }} more →
-                                    {{ else }}
-                                        See all {{ $name }} →
-                                    {{ end }}
-                                </a>
+                <details class="topic-accordion">
+                    <summary class="topic-summary">
+                        <span class="topic-name">{{ $name }}</span>
+                        <span class="topic-count">({{ $postCount }})</span>
+                    </summary>
+                    <ol class="topic-posts">
+                        {{ range first 5 $posts }}
+                            <li>
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                             </li>
-                        </ol>
-                    </details>
-                {{ else }}
-                    <a href="/tags/{{ $tag }}/" class="topic-link">
-                        <span>{{ $name }}</span>
-                    </a>
-                {{ end }}
+                        {{ end }}
+                        <li class="more-link">
+                            <a href="/tags/{{ $tag }}/">
+                                {{ if gt $postCount 5 }}
+                                    {{ sub $postCount 5 }} more →
+                                {{ else }}
+                                    See all {{ $name }} →
+                                {{ end }}
+                            </a>
+                        </li>
+                    </ol>
+                </details>
             </li>
+            {{ end }}
         {{ end }}
 
         {{/* Bottom section */}}
