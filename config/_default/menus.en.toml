@@ -34,8 +34,8 @@
   weight = 70
 
 [[main]]
-  name = "Theory"
-  url = "/tags/theory/"
+  name = "Foundations"
+  url = "/tags/foundations/"
   weight = 80
 
 [[main]]

@@ -1,8 +1,8 @@
 +++
 date = '2026-05-04T11:37:01-04:00'
-draft = true
+draft = false
 title = 'Test'
-tags = ['theory']
+tags = ['foundations']
 +++
 You’re running a coax feedline from your shack to your antenna. Somewhere along that run, RF is getting onto the outside of the coax—you can tell because your microphone is picking up your own signal, and touching the coax changes your SWR reading.
 
