@@ -7,7 +7,7 @@ readingTime = false
 
 {{< figure src="RaajSelfPortrait.jpg" alt="Raaj Shinde" class="portrait" link="false" >}}
 
-My name is Raaj Shinde. I am an engineer, lifelong student, amateur radio operator, writer, and incurably curious human being.
+My name is Raaj Shinde. I am an engineer, lifelong student, amateur radio operator, writer, tinkerer, and incurably curious human being.
 
 Like many people of my generation, my fascination with radio began long before I ever held an amateur license. As a teenager growing up in India, I spent countless late nights listening to shortwave broadcasts drifting in from distant parts of the world. Long before the internet connected humanity digitally, radio hinted at something profound: invisible waves carrying voices, ideas, cultures, music, politics, and human experience across oceans and continents.
 
