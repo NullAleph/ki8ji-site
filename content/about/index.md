@@ -27,11 +27,11 @@ By then, my interests had already begun drifting toward engineering and computat
 
 Later, I completed a Master of Science in Electrical Engineering at the University of Missouri–Rolla, now Missouri University of Science and Technology, specializing in Optimal Control Theory. My graduate research focused on the multivariable identification and control of a uranium dioxide chemical process — work that deepened a lifelong fascination with systems, signals, models, feedback, and the subtle ways complex behavior emerges from interacting variables.
 
-Over the decades, my professional life carried me through software architecture, technology leadership, systems design, analytics, and consulting. But underneath all those roles, the deeper thread remained remarkably constant: an enduring fascination with how things work — and perhaps even more importantly, how little we truly understand.
-
 When I eventually came to the United States, getting licensed was comparatively straightforward. Years of SWL experience and an engineering background meant the examinations held few surprises. I hold an Amateur Extra Class license, callsign KI8JI. My previous callsign was KC8IWP.
 
 Then life intervened - I become an entrepreneur and founded a cloud computing consulting company, and radio went quiet for nearly 25 years.
+
+Over the decades, my professional life carried me through software architecture, technology leadership, systems design, analytics, and consulting. But underneath all those roles, the deeper thread remained remarkably constant: an enduring fascination with how things work — and perhaps even more importantly, how little we truly understand.
 
 Now I find myself returning to amateur radio with very different questions than the ones I had when I was younger. It is no longer just about making contacts or chasing DX, though those things still hold their own magic. Increasingly, I find myself asking deeper questions: What is actually happening when RF leaves an antenna and travels across the world? What do we really mean by fields, waves, resonance, impedance, propagation?
 
