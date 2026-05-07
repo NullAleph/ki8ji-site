@@ -46,6 +46,7 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+          HUGO_PARAMS_UMAMIWEBSITEID: ${{ secrets.UMAMI_WEBSITE_ID }}
         run: |
           hugo \
             --gc \
