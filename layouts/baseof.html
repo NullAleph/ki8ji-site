@@ -334,7 +334,74 @@
             display: block !important;
             border-radius: 4px !important;
         }
-
+        
+        /* ── ARTICLE HEADER IMAGE ────────────────────────────────── */
+        /* Suppress cover image in article view — use inline figure  */
+        /* with caption instead. Cover image still shows on cards.   */
+        .article-page .article-image {
+            display: none;
+        }
+        
+        /* ── COMPACT ARTICLE LIST IMAGE SIZE ────────────────────── */
+        :root {
+            --article-compact-image-size: 120px !important;
+        }
+        
+        /* ── COMPACT ARTICLE LIST IMAGE ─────────────────────────── */
+        .article-list--compact article a {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+        }
+        
+        .article-list--compact .article-details {
+            flex-grow: 1 !important;
+        }
+        
+        .article-list--compact .article-image {
+            width: 200px !important;
+            height: 120px !important;
+            min-width: 200px !important;
+            flex-shrink: 0 !important;
+            margin-left: 1.5rem !important;
+        }
+        
+        .article-list--compact .article-image img {
+            width: 200px !important;
+            height: 120px !important;
+            object-fit: cover !important;
+        }
+        
+        /* ── COMPACT CARD TEXT SIZE ──────────────────────────────── */
+        .article-list--compact .article-title {
+            font-size: 2.5rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        
+        .article-list--compact .article-meta {
+            font-size: 1.6rem !important;
+        }
+        
+        .article-list--compact .article-description {
+            font-size: 1.6rem !important;
+        }
+        
+        /* ── FIGURE CAPTION SPACING ──────────────────────────────── */
+        figure {
+            margin-bottom: 0 !important;
+        }
+        
+        figcaption {
+            margin-top: 0.1rem !important;
+            margin-bottom: 0rem !important;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            font-style: italic;
+            line-height: 1.4;
+        }
+        
         </style>
     </head>
     <body class="{{ block `body-class` . }}{{ end }}">

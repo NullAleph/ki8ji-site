@@ -20,12 +20,12 @@
 
         {{/* Accordion topic links */}}
         {{ $topics := slice
+            (dict "name" "Foundations" "tag" "foundations")
             (dict "name" "Antennas"    "tag" "antennas")
             (dict "name" "Boatanchors" "tag" "boatanchors")
             (dict "name" "Modeling"    "tag" "modeling")
             (dict "name" "Homebrew"    "tag" "homebrew")
             (dict "name" "Instruments" "tag" "instruments")
-            (dict "name" "Foundations" "tag" "foundations")
             (dict "name" "Gear"        "tag" "gear")
             (dict "name" "Station"     "tag" "station")
         }}
@@ -58,7 +58,7 @@
                                 {{ if gt $postCount 5 }}
                                     {{ sub $postCount 5 }} more →
                                 {{ else }}
-                                    See all {{ $name }} →
+                                    More in {{ $name }} →
                                 {{ end }}
                             </a>
                         </li>
