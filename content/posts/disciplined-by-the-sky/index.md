@@ -247,7 +247,7 @@ The oscillator sitting quietly on the bench is therefore being disciplined to a 
 
 A century ago, amateur radio was still a frontier activity operating in what commercial interests dismissed as the “short wave” spectrum. Frequencies above roughly 1.5 MHz were widely considered unsuitable for serious long-distance communication.
 
-The amateurs discovered otherwise.
+The amateur community discovered otherwise.
 
 Those early stations operated with frequency control that today would seem almost unimaginable. A crystal-controlled transmitter that stayed within a few hundred hertz was considered excellent. Variable-frequency oscillators drifted noticeably during warmup. Stability often meant waiting for the rig to thermally settle and learning the peculiar habits of your equipment well enough to compensate by feel.
 
