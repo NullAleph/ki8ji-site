@@ -1,0 +1,11 @@
+.toc-section-title {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    display: block;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--body-text-color);
+    a {
+        color: var(--body-text-color);
+    }
+}

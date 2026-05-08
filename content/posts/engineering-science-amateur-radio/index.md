@@ -4,7 +4,7 @@ date = "2026-05-06"
 draft = false
 tags = ["foundations"]
 description = "The ARRL Handbook is one of the finest engineering references ever produced for amateur radio. But engineering and science ask different questions — and knowing which one you are asking matters."
-
+showDescription = true
 image = "scott-elkins-CmOIh6MuKJI-unsplash.jpg"
 +++
 {{< figure 
