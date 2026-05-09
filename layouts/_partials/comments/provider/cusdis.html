@@ -1,0 +1,130 @@
+<style>
+.comments-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comments-heading {
+    font-family: 'IBM Plex Serif', Georgia, serif !important;
+    font-size: 2.4rem !important;
+    font-weight: 400 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-bottom: 1.5rem !important;
+}
+
+#cusdis_thread {
+    width: 100% !important;
+}
+
+#cusdis_thread iframe {
+    width: 100% !important;
+    height: 350px !important;
+    border: none !important;
+    overflow: hidden !important;
+    display: block !important;
+}
+    
+    style.textContent = `
+    body, html {
+        background: #303030 !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+    input, textarea {
+        background: #424242 !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+    label, p, span {
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+    a {
+        color: rgba(255, 255, 255, 0.4) !important;
+    }
+    button {
+        background: #FF9933 !important;
+        color: #ffffff !important;
+        border: none !important;
+    }
+    ::placeholder {
+        color: rgba(255, 255, 255, 0.3) !important;
+    }
+    .text-center {
+        display: none !important;
+    }
+    `;    
+</style>
+
+<div class="comments-section">
+    <h3 class="comments-heading">Leave a Comment</h3>
+    <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="{{ .Site.Params.comments.cusdis.id }}"
+        data-page-id="{{ .RelPermalink }}"
+        data-page-url="{{ .Permalink }}"
+        data-page-title="{{ .Title }}"
+    ></div>
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+</div>
+
+<script>
+// Inject custom CSS into Cusdis iframe
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+            if (node.tagName === 'IFRAME') {
+                node.addEventListener('load', () => {
+                    try {
+                        const iframeDoc = node.contentDocument || node.contentWindow.document;
+                        const style = iframeDoc.createElement('style');
+                        style.textContent = `
+                            body, html {
+                                background: #303030 !important;
+                                color: rgba(255, 255, 255, 0.8) !important;
+                            }
+                            input, textarea {
+                                background: #424242 !important;
+                                color: rgba(255, 255, 255, 0.8) !important;
+                                border-color: rgba(255, 255, 255, 0.2) !important;
+                            }
+                            label, p, span, a {
+                                color: rgba(255, 255, 255, 0.7) !important;
+                            }
+                            button {
+                                background: #FF9933 !important;
+                                color: #ffffff !important;
+                                border: none !important;
+                            }
+                            ::placeholder {
+                                color: rgba(255, 255, 255, 0.3) !important;
+                            }
+                            .text-center {
+                                    display: none !important;
+                            }
+                        `;
+                        iframeDoc.head.appendChild(style);
+                    } catch(e) {
+                        // Cross-origin iframe - injection blocked
+                        console.log('Cusdis iframe style injection blocked:', e);
+                    }
+                });
+            }
+        });
+    });
+});
+
+observer.observe(document.getElementById('cusdis_thread'), {
+    childList: true,
+    subtree: true
+});
+
+// Auto-resize
+window.addEventListener('message', function(e) {
+    if (e.data && e.data.from === 'cusdis') {
+        const iframe = document.querySelector('#cusdis_thread iframe');
+        if (iframe && e.data.height) {
+            iframe.style.height = e.data.height + 'px';
+        }
+    }
+});
+</script>
