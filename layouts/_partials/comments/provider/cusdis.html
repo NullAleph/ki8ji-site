@@ -124,7 +124,7 @@ window.addEventListener('message', function(e) {
     if (e.data && e.data.from === 'cusdis') {
         const iframe = document.querySelector('#cusdis_thread iframe');
         if (iframe && e.data.height) {
-            iframe.style.height = e.data.height + 'px';
+            iframe.style.height = (parseInt(e.data.height) + 50) + 'px';
         }
     }
 });
