@@ -34,7 +34,7 @@ The more I thought about it, the more I began to see two distinct streams throug
 
 What surprised me was realizing how old this distinction actually is.
 
-Ancient Indian philosophical traditions wrestled deeply with the tension between received knowledge and direct experience. There is knowledge that can be transmitted through teaching, text, and formal reasoning — propositional knowledge. And there is knowledge that emerges only through direct encounter and lived experience — experiential knowledge. The debate about the relative authority of these two modes of knowing runs through centuries of Indian philosophical inquiry. The tradition's conclusion, roughly, is that neither is sufficient alone, and that genuine understanding requires both in dialogue. 
+Ancient Indian philosophical traditions wrestled deeply with the tension between received knowledge and direct experience. There is knowledge that can be transmitted through teaching, text, and formal reasoning — *propositional knowledge*. And there is knowledge that emerges only through direct encounter and lived experience — *experiential knowledge*. The debate about the relative authority of these two modes of knowing runs through centuries of Indian philosophical inquiry. The tradition's conclusion, roughly, is that neither is sufficient alone, and that genuine understanding requires both in dialogue. 
 
 I believe this is a useful model for thinking about technical knowledge in amateur radio. Let’s look at why this might be, and examine the implications of this model.
 
