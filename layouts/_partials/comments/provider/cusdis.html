@@ -74,7 +74,7 @@ const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
             if (node.tagName === 'IFRAME') {
-                //node.setAttribute('scrolling', 'no');
+                node.setAttribute('scrolling', 'no');
                 node.addEventListener('load', () => {
                     try {
                         const iframeDoc = node.contentDocument || node.contentWindow.document;
