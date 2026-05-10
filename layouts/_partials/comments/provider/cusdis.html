@@ -131,27 +131,29 @@ function startCusdisResize() {
         
         iframeObserver.disconnect();
         
-        // Poll until content is loaded and height stabilizes
         let lastHeight = 0;
-        let stableCount = 0;
         
-        const poll = setInterval(() => {
+        // Fast poll on initial load, then slow continuous poll
+        // to catch dynamic content like reply forms
+        function measureHeight() {
             try {
                 const h = iframe.contentWindow.document.body.scrollHeight;
-                if (h === lastHeight) {
-                    stableCount++;
-                } else {
-                    stableCount = 0;
+                if (h !== lastHeight) {
                     lastHeight = h;
                     iframe.style.height = (h + 20) + 'px';
                 }
-                // Stop polling once height has been stable for 5 cycles
-                if (stableCount >= 5) clearInterval(poll);
             } catch(e) {
-                // Cross-origin — fall back to fixed height
-                clearInterval(poll);
+                // Cross-origin — do nothing
             }
-        }, 200);
+        }
+        
+        // Fast polling for first 3 seconds (initial load)
+        const fastPoll = setInterval(measureHeight, 100);
+        setTimeout(() => {
+            clearInterval(fastPoll);
+            // Then slow continuous polling forever (catches reply forms, etc.)
+            setInterval(measureHeight, 500);
+        }, 3000);
     });
     
     iframeObserver.observe(thread, { childList: true, subtree: true });
