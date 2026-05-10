@@ -121,12 +121,42 @@ observer.observe(document.getElementById('cusdis_thread'), {
 });
 
 // Auto-resize
-window.addEventListener('message', function(e) {
-    if (e.data && e.data.from === 'cusdis') {
-        const iframe = document.querySelector('#cusdis_thread iframe');
-        if (iframe && e.data.height) {
-            iframe.style.height = (parseInt(e.data.height) + 50) + 'px';
-        }
-    }
-});
+// Auto-resize Cusdis iframe by polling its scrollHeight
+function startCusdisResize() {
+    const thread = document.getElementById('cusdis_thread');
+    if (!thread) return;
+    
+    const iframeObserver = new MutationObserver(() => {
+        const iframe = thread.querySelector('iframe');
+        if (!iframe) return;
+        
+        iframeObserver.disconnect();
+        
+        // Poll until content is loaded and height stabilizes
+        let lastHeight = 0;
+        let stableCount = 0;
+        
+        const poll = setInterval(() => {
+            try {
+                const h = iframe.contentWindow.document.body.scrollHeight;
+                if (h === lastHeight) {
+                    stableCount++;
+                } else {
+                    stableCount = 0;
+                    lastHeight = h;
+                    iframe.style.height = (h + 20) + 'px';
+                }
+                // Stop polling once height has been stable for 5 cycles
+                if (stableCount >= 5) clearInterval(poll);
+            } catch(e) {
+                // Cross-origin — fall back to fixed height
+                clearInterval(poll);
+            }
+        }, 200);
+    });
+    
+    iframeObserver.observe(thread, { childList: true, subtree: true });
+}
+
+startCusdisResize();
 </script>
