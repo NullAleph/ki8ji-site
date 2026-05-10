@@ -369,7 +369,7 @@
         /* ── ARTICLE HEADER IMAGE ────────────────────────────────── */
         /* Suppress cover image in article view — use inline figure  */
         /* with caption instead. Cover image still shows on cards.   */
-        .article-page .article-image {
+        .article-page .article-header .article-image {
             display: none;
         }
         
@@ -452,6 +452,15 @@
         /* Right side bar TOC: remove uppercase */
         .widget--toc .widget-title {
             text-transform: none;
+        }
+        
+        /* ── RELATED CONTENT SPACING ─────────────────────────────── */
+        aside {
+            margin-top: 2rem;
+        }
+        
+        aside h2.section-title {
+            display: block !important;
         }
         
         </style>
