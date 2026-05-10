@@ -3,10 +3,14 @@ locale = 'en-us'
 title = "KI8JI"
 theme = "stack"
 mainSections = ["posts"]
-
+defaultTheme = "dark"
 
 [params]
 	math = true
+	
+[params.colorScheme]
+toggle = false
+default = "dark"
 				
 [markup.goldmark.extensions.passthrough]
 	enable = true
