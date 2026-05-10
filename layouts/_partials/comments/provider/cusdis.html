@@ -20,7 +20,7 @@
 #cusdis_thread iframe {
     width: 100% !important;
 //    height: 850px !important;
-    height: 600px;
+    height: 500px;
     border: none !important;
     overflow: hidden !important;
     display: block !important;
@@ -74,6 +74,7 @@ const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
             if (node.tagName === 'IFRAME') {
+                node.setAttribute('scrolling', 'no');
                 node.addEventListener('load', () => {
                     try {
                         const iframeDoc = node.contentDocument || node.contentWindow.document;
