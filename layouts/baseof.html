@@ -134,15 +134,23 @@
         }
 
         .topic-posts li {
-            padding: 0.3rem 0;
+            padding: 0.6rem 0;
         }
 
         .topic-posts li a {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.6) !important;
-            text-decoration: none !important;
-            line-height: 1.3;
-            display: block;
+            display: block !important;
+            padding-left: 1rem !important;
+            text-indent: -1rem !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        
+        .topic-posts li a::before {
+            content: '– ';
+            color: rgba(255, 153, 51, 0.9);
+        }
+        
+        .more-link a::before {
+            content: '' !important;
         }
 
         .topic-posts li a:hover {
