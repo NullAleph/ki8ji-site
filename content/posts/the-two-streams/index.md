@@ -176,3 +176,24 @@ Which is, in the end, what this series of essays is attempting to practice.
 * Richard Feynman — The Character of Physical Law
 * Frank Tipler — “Rotating Cylinders and the Possibility of Global Causality Violation” (Physical Review D, 1974)
 (The famous “Tipler Cylinder” paper: a fascinating example of mathematically rigorous physics operating at the edge of physical realizability.)
+
+---
+
+## Addendum: A Third Stream Powered by Serendipity?
+Shortly after this essay was posted, my friend Jeff Bauman, W8KZW, wrote with a thought:
+	
+*Shear accident — the third stream?*
+	
+Jeff was recalling the story of Bob Gore, who in 1969 was attempting to stretch heated rods of PTFE slowly to create a plumber's tape. After repeated failures, he became frustrated and gave the rod a sudden, sharp yank. Instead of breaking, the material stretched nearly 1,000%, producing a strong, microporous structure that was breathable yet waterproof. That discovery became Gore-Tex — and the pun in Jeff's question is entirely intentional.
+	
+It is a fair challenge to the two-stream model.
+	
+The Gore-Tex story does not fit cleanly into either stream. It was not deduced from theory. It was not the result of systematic empirical variation. It was an accident, born of frustration, that happened to produce something remarkable.
+	
+And yet — the accident alone was not sufficient. Bob Gore recognized what he had found, understood it well enough to patent it, and built a company around it. That recognition required propositional knowledge. Without understanding polymer chemistry, the unexpected stretch was simply a broken experiment. The serendipity provided the spark; Stream One carried it forward.
+	
+In amateur radio, the serendipitous stream might be the most honest description of how some of our most persistent mythology originates. An operator makes a wiring error, creates an unintended configuration, notices surprisingly good results, and tells others. Pure accident — but what happens next determines everything. Does someone model it and understand why it worked? Or does it propagate as received wisdom, untethered from its accidental origins?
+	
+Perhaps serendipity is less a third stream than a hidden source that feeds both. The question of which stream carries the discovery forward — and whether anyone stops to ask why the accident worked — may be one of the most important epistemological question of all.
+	
+Jeff, thank you for the *shear* insight!
