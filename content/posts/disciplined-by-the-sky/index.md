@@ -63,9 +63,9 @@ You calibrated your oscillator against whatever reference you could find. Maybe 
 
 Before GPS discipline became practical, serious frequency standards mostly lived in laboratories, observatories, and national standards institutions. Rubidium references existed, along with cesium beam standards and hydrogen masers, but they were expensive instruments. Often large, power-hungry, and far beyond the reach of most amateurs.
 
-The deeper problem was that local time slowly drifts away from itself.
+The deeper problem is that local time slowly and inevitably drifts away from itself.
 
-The problem is that local time is always, in some sense, *lost*. Every oscillator ages. Every oscillator drifts. Every oscillator is a small clock running in thermal and mechanical isolation from the rest of the universe, gradually losing its argument with entropy.
+Local time is always, in some sense, *lost*. Every oscillator ages. Every oscillator drifts. Every oscillator is a small clock running in thermal and mechanical isolation from the rest of the universe, gradually losing its argument with entropy.
 
 ---
 
